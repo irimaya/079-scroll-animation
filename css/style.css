@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Root */
+:root {
+  --red-color: #880614;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* background-color: #efedd6; */
+  background: var(--red-color);
+  /* font-family: 'Montserrat', sans-serif; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 40px;
+  /* font-family: 'Pacifico', cursive; */
+  color: #fff;
+  font-size: 6rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+.box {
+  /* background-color: steelblue; */
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  padding: 20px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 3rem;  
+  font-family: 'Great Vibes', cursive;
+}
+
+.naughty-line {
+  text-decoration: line-through;
+  color: var(--red-color);
+}
+
+.naughty-line h2 {
+  color: #000;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 100;
+}
+
+.naughty-text{
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 1.7rem;
+  color: var(--red-color);
+  font-family: 'Great Vibes', cursive;
+  transform: rotate(-20deg);
+  padding-bottom: 80px;
+}
+
+/* Media Querie */
+@media(max-width: 800px) {
+  .box {
+    width: 400px;
+    /* height: 200px; */
+    /* margin: 10px;
+    border-radius: 10px;
+    box-shadow: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+    padding: 20px; */
+  }
+}
